@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Matere Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center/cover;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: #BA0C2F;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        .quote {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #ffffff;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background: #3e3e3e;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Remove default list styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between menu items */
+}
+
+/* Style each navigation item */
+nav ul li {
+    display: inline-block;
+}
+
+/* Style the navigation links */
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    background-color: #62f4b5; /* Pale blue */
+    color: #004080; /* Dark blue text */
+    padding: 10px 15px;
+    border: 2px solid #004080;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add hover effect */
+nav ul li a:hover {
+    background-color: #004080;
+    color: white;
+}
+        #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    background: rgb(84, 83, 83); /* Gray background */
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.about-content img {
+    width: 300px; /* Adjust size */
+    height: auto;
+    border-radius: 10px;
+}
+        
+        .gallery-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .gallery {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .gallery img, .gallery video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        footer {
+            background: #3f3e3e;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .return-home {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .gallery {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    white-space: nowrap; /* Prevents items from wrapping */
+}
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-content img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+}
+
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+#photo img {
+
+    max-width: 600px;  /* Adjust between 300px - 250px based on your design */
+    height: auto;      /* Maintains aspect ratio */
+    border-radius: 5px; /* Softens edges for a sleek look */
+    object-fit: cover; /* Ensures images fit without distortion */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+#photo img:hover {
+    transform: scale(1.05); /* Slight zoom effect for interaction */
+}
+
+#posters-gallery img {
+    max-width: 500px;  /* Adjust between 400px - 400px based on design */
+    height: auto;      /* Keeps proportions */
+    border-radius: 5px; /* Softens edges for a professional look */
+    object-fit: cover; /* Ensures all images fit neatly */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Adds slight shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth effect on hover */
+}
+
+#posters-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect for interactivity */
+}
+#posters {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.branding-preview {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.branding-preview img {
+    width: 250px; /* Adjust based on layout */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.branding-preview img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+#motion-graphics {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(153, 153, 153, 0.8);
+    color: white;
+}
+
+.gallery-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.gallery video {
+    width: 400px;  /* Adjust width */
+    height: 250px; /* Adjust height */
+    border-radius: 10px;
+    flex-shrink: 0;
+    object-fit: cover; /* Ensures video fits well */
+}
+
+
+.gallery-intro {
+    background-color: #d0e8f2; /* Pale blue */
+    border: 2px solid #a0c4db; /* Slightly darker blue border */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #333;
+}
+
+.about-extra {
+    background-color: #843d4e; /* Dark gray background */
+    color: white;
+    padding: 30px 0; /* Top and bottom padding */
+    width: 100%; /* Full width */
+    text-align: center;
+}
+
+.about-extra p {
+    max-width: 80%; /* Restricts paragraph width */
+    margin: auto; /* Centers text */
+    font-size: 18px;
+    line-height: 1.6;
+}
+.gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px; /* Space between items */
+    overflow-x: scroll; /* Enables horizontal scrolling */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.pdf-container {
+    min-width: 800px; /* Adjust PDF width */
+    height: 500px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.branding-section {
+    background-color: rgb(85, 145, 158); /* Golden background */
+    width: 100%; /* Full width */
+    padding: 20px 0; /* Space above and below */
+}
+
+.branding-text {
+    text-align: center; /* Centers text */
+    max-width: 60%; /* Restricts text width */
+    margin: 0 auto; /* Centers block */
+    font-size: 1.2em;
+    color: #ffffff; /* Darker text for contrast */
+    font-weight: lighter;
+}
+
+
+
+ </style>
+    <script>
+        function scrollGallery(id, direction) {
+            const gallery = document.getElementById(id);
+            const scrollAmount = 300;
+            gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo"> <img src="Photo/logo circle.png" alt="Jesse Matere Logo"></div>
+        <h1 class="quote">“Creativity is intelligence having fun.”</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#photo-gallery">Photo Gallery</a></li>
+            <li><a href="#motion-graphics">Motion Graphics</a></li>
+            <li><a href="#posters">Posters</a></li>
+            <li><a href="#video-gallery">Video Gallery</a></li>
+            <li><a href="#branding">Branding</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! Jesse Matere is a dynamic communications specialist with expertise in storytelling, visual design, and digital media. From videography to strategic messaging, he crafts compelling narratives that drive impact and engagement. I specialize in visual communications. Jesse Matere is a member of the Media Council of Kenya (MCK) and the Public Relations Society of Kenya (PRSK).</p>
+            </div>
+            <img src="Photo/my bg.jpg" alt="Jesse Matere">
+        </div>
+        
+    </section>
+
+    <div class="about-extra">
+        <p>
+            With years of experience in digital content creation, I strive to tell compelling stories through visuals and strategic communication. My work focuses on impactful messaging that resonates with diverse audiences.
+        </p>
+    </div>
+    
+    <section id="photo-gallery" class="gallery-container">
+        <h2>Photo Gallery</h2>
+        <p class="gallery-intro">
+            Welcome to my photo gallery! Here, you'll find a collection of my best photography works, capturing moments with creativity and precision. Photography is a powerful art form that captures moments, emotions, and stories through a lens. It allows us to document history, express creativity, and communicate visually. From portraits to landscapes, photography preserves memories and provides a unique perspective on the world. 
+
+        </p>
+        <button class="btn prev" onclick="scrollGallery('photo', -1)">&#10094;</button>
+        <div class="gallery" id="photo">
+            <img src="Photo/photo 1.jpg" alt="Photo 1">
+            <img src="Photo/photo 2.JPG" alt="Photo 2">
+            <img src="Photo/photo 3.JPG" alt="Photo 3">
+            <img src="Photo/photo 4.jpg" alt="Photo 4">
+            <img src="Photo/photo 5.jpg" alt="Photo 5">
+            <img src="Photo/photo 6.jpg" alt="Photo 6">
+            <img src="Photo/photo 7.jpg" alt="Photo 7">
+            <img src="Photo/photo 8.jpg" alt="Photo 8">
+            <img src="Photo/photo 9.jpg" alt="Photo 9">
+            <img src="Photo/photo 10.jpg" alt="Photo 10">
+            <img src="Photo/photo 11.jpg" alt="Photo 11">
+            <img src="Photo/photo 12.jpg" alt="Photo 12">
+            <img src="Photo/photo 13.jpg" alt="Photo 13">
+            <img src="Photo/photo 14.jpg" alt="Photo 14">
+            <img src="Photo/photo 15.jpg" alt="Photo 15">
+            <img src="Photo/photo 16.jpg" alt="Photo 16">
+            <img src="Photo/photo 17.jpg" alt="Photo 17">
+            <img src="Photo/photo 18.jpg" alt="Photo 18">
+            <img src="Photo/photo 19.jpg" alt="Photo 19">
+            <img src="Photo/photo 20.jpg" alt="Photo 20">
+            <img src="Photo/photo 21.jpg" alt="Photo 21">
+            <img src="Photo/photo 22.jpg" alt="Photo 22">
+            <img src="Photo/photo 23.jpg" alt="Photo 23">
+            <img src="Photo/photo 24.jpg" alt="Photo 24">
+            <img src="Photo/photo 25.jpg" alt="Photo 25">
+            <img src="Photo/photo 26.jpg" alt="Photo 26">
+            <img src="Photo/photo 27.jpg" alt="Photo 27">
+            <img src="Photo/photo 28.jpg" alt="Photo 28">
+            <img src="Photo/photo 29.jpg" alt="Photo 29">
+            <img src="Photo/photo 30.jpg" alt="Photo 30">
+            <img src="Photo/photo 31.jpg" alt="Photo 31">
+            <img src="Photo/photo 32.jpg" alt="Photo 32">
+            <img src="Photo/photo 33.jpg" alt="Photo 33">
+            <img src="Photo/photo 34.jpg" alt="Photo 34">
+            <img src="Photo/photo 35.jpg" alt="Photo 35">
+            <img src="Photo/photo 36.jpg" alt="Photo 36">
+            <img src="Photo/photo 37.jpg" alt="Photo 37">
+            <img src="Photo/photo 38.jpg" alt="Photo 38">
+            <img src="Photo/photo 39.jpg" alt="Photo 39">
+            <img src="Photo/photo 40.jpg" alt="Photo 40">
+            <img src="Photo/photo 41.jpg" alt="Photo 41">
+            <img src="Photo/photo 42.jpg" alt="Photo 42">
+            <img src="Photo/photo 43.jpg" alt="Photo 43">
+            <img src="Photo/photo 44.jpg" alt="Photo 44">
+            <img src="Photo/photo 45.jpg" alt="Photo 45">
+            <img src="Photo/photo 46.jpg" alt="Photo 46">
+            <img src="Photo/photo 47.jpg" alt="Photo 47">
+            <img src="Photo/photo 48.jpg" alt="Photo 48">
+            <img src="Photo/photo 49.jpg" alt="Photo 49">
+            <img src="Photo/photo 50.jpg" alt="Photo 50">
+            <img src="Photo/photo 51.jpg" alt="Photo 51">
+            <img src="Photo/photo 52.jpg" alt="Photo 52">
+            <img src="Photo/photo 53.jpg" alt="Photo 53">
+            <img src="Photo/photo 54.jpg" alt="Photo 54">
+            <img src="Photo/photo 55.jpg" alt="Photo 55">
+            <img src="Photo/photo 56.jpg" alt="Photo 56">
+            <img src="Photo/photo 57.jpg" alt="Photo 57">
+            <img src="Photo/photo 58.jpg" alt="Photo 58">
+            <img src="Photo/photo 59.jpg" alt="Photo 59">
+            <img src="Photo/photo 60.jpg" alt="Photo 60">
+            <img src="Photo/photo 61.jpg" alt="Photo 61">
+            <img src="Photo/photo 62.jpg" alt="Photo 62">
+            <img src="Photo/photo 63.jpg" alt="Photo 63">
+            <img src="Photo/photo 64.jpg" alt="Photo 64">
+
+        </div>
+        <button class="btn next" onclick="scrollGallery('photo', 1)">&#10095;</button>
+    </section>
+    
+    <section id="motion-graphics" class="gallery-container">
+        <h2>Motion Graphics</h2>
+        <button class="btn prev" onclick="scrollGallery('motion', -1)">&#10094;</button>
+        <div class="gallery" id="motion">
+            <video controls>
+                <source src="Motion/anime 1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="Motion/anime 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="Motion/anime 3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="Motion/anime 4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="Motion/anime 5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button class="btn next" onclick="scrollGallery('motion', 1)">&#10095;</button>
+    </section>
+    <p style="max-width: 800px; margin: 20px auto; font-size: 1.2em; line-height: 1.6;background: #edb59b; /* Orange Pantone */ text-align: center; padding: 30px 20px; width: 100%;
+
+">
+        Motion graphics is a form of animation that combines visual design, movement, and sound to create engaging digital content. It is widely used in branding, advertising, social media, and storytelling to enhance communication and captivate audiences.
+    </p>
+
+    <section id="posters" class="gallery-container">
+        <h2>Posters</h2>
+        <button class="btn prev" onclick="scrollGallery('posters-gallery', -1)">&#10094;</button>
+        <div class="gallery" id="posters-gallery">
+            <img src="Posters/poster 1.jpeg" alt="Poster 1">
+            <img src="Posters/poster 2.jpeg" alt="Poster 2">
+            <img src="Posters/poster 3.jpg" alt="Poster 2">
+            <img src="Posters/poster 4.jpg" alt="Poster 2">
+            <img src="Posters/poster 5.jpg" alt="Poster 2">
+            <img src="Posters/poster 6.jpg" alt="Poster 2">
+            <img src="Posters/poster 7.jpeg" alt="Poster 2">
+            <img src="Posters/poster 8.jpg" alt="Poster 2">
+            <img src="Posters/poster 9.jpg" alt="Poster 2">
+            <img src="Posters/poster 10.png" alt="Poster 2">
+            <img src="Posters/poster 11.jpg" alt="Poster 2">
+            <img src="Posters/poster 19.jpg" alt="Poster 2">
+            <img src="Posters/poster 12.jpg" alt="Poster 2">
+            <img src="Posters/poster 13.jpg" alt="Poster 2">
+            <img src="Posters/poster 14.jpg" alt="Poster 2">
+            <img src="Posters/poster 15.jpg" alt="Poster 2">
+            <img src="Posters/poster 16.jpg" alt="Poster 2">
+            <img src="Posters/poster 17.jpg" alt="Poster 2">
+            <img src="Posters/poster 18.png" alt="Poster 2">
+        </div>
+        <button class="btn next" onclick="scrollGallery('posters-gallery', 1)">&#10095;</button>
+    </section>
+
+    
+    <section id="video-gallery" class="gallery-container">
+        <h2>Video Gallery</h2>
+        <button class="btn prev" onclick="scrollGallery('video', -1)">&#10094;</button>
+        <div class="gallery" id="video">
+            <video controls><source src="Video/vid 01.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 02.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 03.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 04.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 05.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 06.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 07.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 08.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 09.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 10.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 11.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 12.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 13.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 14.mp4" type="video/mp4"></video>
+            <video controls><source src="Video/vid 15.mp4" type="video/mp4"></video>
+        </div>
+        <button class="btn next" onclick="scrollGallery('video', 1)">&#10095;</button>
+    </section>
+
+    <section id="branding" class="gallery-container">
+        <h2>Branding</h2>
+        <div class="branding-section">
+            <p class="branding-text">
+                Branding is the process of creating a unique identity for a business, product, or individual through visual elements, messaging, and overall perception. It encompasses logos, color schemes, typography, and tone of communication to establish a distinct and memorable presence. A strong brand builds trust, fosters customer loyalty, and differentiates an entity from its competitors. Effective branding ensures consistency across all platforms, reinforcing the values and mission behind the brand while shaping how the audience perceives and interacts with it.
+            </p>
+        </div>
+        <button class="btn prev" onclick="scrollGallery('branding-gallery', -1)">&#10094;</button>
+        
+        <div class="gallery" id="branding-gallery">
+            <div class="pdf-container">
+                <iframe src="branding/brand 1.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 2.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 3.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 4.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 5.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 6.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 7.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 8.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 9.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 10.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 11.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 12.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 13.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 14.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 15.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 16.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 17.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 18.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 19.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 20.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 21.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 22.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 23.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 24.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 25.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 26.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 27.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 28.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 29.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 30.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="branding/brand 31.pdf" frameborder="0"></iframe>
+            </div>
+           
+        </div>
+        
+        <button class="btn next" onclick="scrollGallery('branding-gallery', 1)">&#10095;</button>
+    </section>
+    
+    
+    <footer>
+        <section id="contact" class="gallery-container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:jesewatakila@gmail.com">jesewatakila@gmail.com</a></p>
+        <p>Phone: 0796935268</p>
+        <a href="#top" class="return-home">Return Home</a>
+    </section>
+    </footer>
+</body>
+</html>
